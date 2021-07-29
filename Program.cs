@@ -113,7 +113,7 @@ namespace RulesEditor
 
                     mAction = curR.SelectToken("$.Value.#value[?(@.name.#value == 'Действие' )].Value.#value").ToString();
                     mSourceName = curR.SelectToken("$.Value.#value[?(@.name.#value == 'ИмяСвойстваИсточник' )].Value.#value").ToString();
-                         mRecName = curR.SelectToken("$.Value.#value[?(@.name.#value == 'ИмяСвойстваПриемник' )].Value.#value").ToString();
+                    mRecName = curR.SelectToken("$.Value.#value[?(@.name.#value == 'ИмяСвойстваПриемник' )].Value.#value").ToString();
                     mTypeName = curR.SelectToken("$.Value.#value[?(@.name.#value == 'ТипСтрокойПриемник' )].Value.#value").ToString();
                     mOrder = curR.SelectToken("$.Value.#value[?(@.name.#value == 'Порядок' )].Value.#value").ToString();
                     mBef = curR.SelectToken("$.Value.#value[?(@.name.#value == 'Перед' )].Value.#value").ToString();
@@ -123,7 +123,7 @@ namespace RulesEditor
                         NameProperty = NameRules,
                         PropertyNameSource = mSourceName,
                         PropertyNameDestination = mRecName,
-                                       TypeStringDestination = mTypeName,
+                        TypeStringDestination = mTypeName,
                         Action = mAction,
                         Order = Int32.Parse(mOrder),
                         Before = mBef
