@@ -1,0 +1,1 @@
+{"NameRules":"Организации","MultiValue":false,"listRules":[{"NameProperty":"Организации","PropertyNameSource":"СобственныйКонтрагент","PropertyNameDestination":"СобственныйКонтрагент","TypeStringDestination":"Контрагент","Action":"Добавить","Order":17,"Before":"КонтактнаяИнформация"}]}

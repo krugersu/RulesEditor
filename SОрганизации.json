@@ -1,0 +1,92 @@
+{
+	"#type": "jv8:Array",
+	"#value": [
+		{
+			"#type": "jv8:Structure",
+			"#value": [
+				{
+					"name": {
+						"#type": "jxs:string",
+						"#value": "Организации"
+					},
+					"Value": {
+						"#type": "jv8:Structure",
+						"#value": [
+							{
+								"name": {
+									"#type": "jxs:string",
+									"#value": "СобственныйКонтрагент"
+								},
+								"Value": {
+									"#type": "jv8:Structure",
+									"#value": [
+										{
+											"name": {
+												"#type": "jxs:string",
+												"#value": "ИмяСвойстваИсточник"
+											},
+											"Value": {
+												"#type": "jxs:string",
+												"#value": "СобственныйКонтрагент"
+											}
+										},
+										{
+											"name": {
+												"#type": "jxs:string",
+												"#value": "ИмяСвойстваПриемник"
+											},
+											"Value": {
+												"#type": "jxs:string",
+												"#value": "СобственныйКонтрагент"
+											}
+										},
+										{
+											"name": {
+												"#type": "jxs:string",
+												"#value": "ТипСтрокойПриемник"
+											},
+											"Value": {
+												"#type": "jxs:string",
+												"#value": "Контрагент"
+											}
+										},
+										{
+											"name": {
+												"#type": "jxs:string",
+												"#value": "Действие"
+											},
+											"Value": {
+												"#type": "jxs:string",
+												"#value": "Добавить"
+											}
+										},
+										{
+											"name": {
+												"#type": "jxs:string",
+												"#value": "Порядок"
+											},
+											"Value": {
+												"#type": "jxs:decimal",
+												"#value": 17
+											}
+										},
+										{
+											"name": {
+												"#type": "jxs:string",
+												"#value": "Перед"
+											},
+											"Value": {
+												"#type": "jxs:string",
+												"#value": "КонтактнаяИнформация"
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

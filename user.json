@@ -1,0 +1,24 @@
+{
+  "NameRules": "Тестовое пwwwwравило",
+  "MultiValue": false,
+  "listRules": [
+    {
+      "NameProperty": "Тестовый реквизит",
+      "PropertyNameSource": "Тестовый реквизит",
+      "PropertyNameDestination": "Тестовый22 реквизит",
+      "TypeStringDestination": "Строка",
+      "Action": "Добавить",
+      "Order": 10,
+      "Before": ""
+    },
+    {
+      "NameProperty": "1Тестовый реквизит",
+      "PropertyNameSource": "1Тестовый реквизит",
+      "PropertyNameDestination": "1Тестовый22 реквизит",
+      "TypeStringDestination": "Строка",
+      "Action": "Добавить",
+      "Order": 10,
+      "Before": ""
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "#type": "jv8:Array",
+  "#value": [
+    {
+      "#type": "jv8:Structure",
+      "#value": [
+        {
+          "name": {
+            "#type": "jxs:string",
+            "#value": "ПоступлениеТоваров"
+          },
+          "Value": {
+            "#type": "jv8:Structure",
+            "#value": [
+              {
+                "name": {
+                  "#type": "jxs:string",
+                  "#value": "БанковскийСчетОрганизации"
+                },
+                "Value": {
+                  "#type": "jv8:Structure",
+                  "#value": [
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваИсточник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "БанковскийСчетОрганизации"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "БанковскийСчетОрганизации"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ТипСтрокойПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "БанковскиеСчета"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Действие"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "Пропустить"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Порядок"
+                      },
+                      "Value": {
+                        "#type": "jxs:decimal",
+                        "#value": 10
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Перед"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": ""
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "#type": "jxs:string",
+                  "#value": "УдалитьБанковскийСчетОрганизации"
+                },
+                "Value": {
+                  "#type": "jv8:Structure",
+                  "#value": [
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваИсточник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "УдалитьБанковскийСчетОрганизации"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "УдалитьБанковскийСчетОрганизации"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ТипСтрокойПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "УдалитьБанковскиеСчетаОрганизаций"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Действие"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "Добавить"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Порядок"
+                      },
+                      "Value": {
+                        "#type": "jxs:decimal",
+                        "#value": 12
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Перед"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "ЕстьРасхождения"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "#type": "jxs:string",
+                  "#value": "БанковскийСчетОрганизации"
+                },
+                "Value": {
+                  "#type": "jv8:Structure",
+                  "#value": [
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваИсточник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "БанковскийСчетОрганизации"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "БанковскийСчетОрганизации"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ТипСтрокойПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "БанковскиеСчета"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Действие"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "Добавить"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Порядок"
+                      },
+                      "Value": {
+                        "#type": "jxs:decimal",
+                        "#value": 12
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Перед"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "УдалитьБанковскийСчетОрганизации"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "name": {
+                  "#type": "jxs:string",
+                  "#value": "крюНеПроводить"
+                },
+                "Value": {
+                  "#type": "jv8:Structure",
+                  "#value": [
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваИсточник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "крюНеПроводить"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ИмяСвойстваПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "крюНеПроводить"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "ТипСтрокойПриемник"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "Булево"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Действие"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "Пропустить"
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Порядок"
+                      },
+                      "Value": {
+                        "#type": "jxs:decimal",
+                        "#value": 12
+                      }
+                    },
+                    {
+                      "name": {
+                        "#type": "jxs:string",
+                        "#value": "Перед"
+                      },
+                      "Value": {
+                        "#type": "jxs:string",
+                        "#value": "УдалитьБанковскийСчетОрганизации"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
