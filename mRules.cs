@@ -51,8 +51,39 @@ namespace RulesEditor
         public string Before { get; set; }
     }
 
-    internal class mRules
 
+    struct ListTabPart
+    {
+        /// <summary>
+        /// Имя реквизита
+        /// </summary>
+        /// <value> String</value>
+        [JsonProperty("Имя табличной части")]
+        public string NameProperty { get; set; }
+          
+    }
+
+  struct ListTabPartContent
+    {
+        /// <summary>
+        /// Имя реквизита
+        /// </summary>
+        /// <value> String</value>
+        [JsonProperty("Имя табличной части")]
+        public string NameProperty { get; set; }
+        /// <summary>
+        /// Список структур с правилами для реквизитов
+        /// </summary>
+        /// <typeparam name="RulesProperty"></typeparam>
+        /// <returns>Структура с правилами</returns>
+        [JsonProperty("Список правил для табличных частей")]
+        public List<RulesProperty> listRules { get; set; } = new List<RulesProperty>();
+          
+    }
+
+
+
+    internal class mRules
     {
         /// <summary>
         /// Имя правила
@@ -73,12 +104,9 @@ namespace RulesEditor
         /// <returns>Структура с правилами</returns>
         [JsonProperty("Список правил")]
         public List<RulesProperty> listRules { get; set; } = new List<RulesProperty>();
-
-
     }
 
     internal class mRulesTabPart
-
     {
         /// <summary>
         /// Имя правила
@@ -91,13 +119,17 @@ namespace RulesEditor
         /// <value>bool</value>
         public bool MultiValue { get; set; }
         /// <summary>
+        ///  Список табличных частей
+        /// </summary>
+        /// <typeparam name="ListTabPart"></typeparam>
+        /// <returns></returns>
+       public List<ListTabPart> ListTabPart { get; set; } = new List<ListTabPart>();  
+        /// <summary>
         /// Список структур с правилами для реквизитов
         /// </summary>
         /// <typeparam name="RulesProperty"></typeparam>
         /// <returns>Структура с правилами</returns>
-        public List<RulesProperty> listRules { get; set; } = new List<RulesProperty>();
-
-
+        public ListTabPartContent  ListTabPartContent{ get; set; }
     }
 
 }

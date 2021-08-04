@@ -68,9 +68,9 @@ namespace RulesEditor
                     Console.WriteLine(jsonString);
                 }
             }
-            else
+            else if (switchvalue == 1)
             {
-                string jsonString = File.ReadAllText("SПоступлениеТоваровN.json");
+                string jsonString = File.ReadAllText("SОрганизацииN.json");
                 mRules mRules1 = JsonConvert.DeserializeObject<mRules>(jsonString);
                 List<RulesProperty> tt = mRules1.listRules;
                 Console.WriteLine(mRules1.NameRules);
@@ -82,6 +82,15 @@ namespace RulesEditor
                     Console.WriteLine((p.NameProperty));
                     Console.WriteLine((p.Action));
                 }
+
+            }
+            else if (switchvalue == 2)
+            {
+                // mRules cRulN = new mRules();
+                string jsonString = File.ReadAllText("SПоступлениеТоваровN.json");
+                mRules mRules1 = JsonConvert.DeserializeObject<mRules>(jsonString);
+                List<RulesProperty> ListRuls = mRules1.listRules;
+
             }
         }
 
@@ -117,6 +126,68 @@ namespace RulesEditor
                     mTypeName = curR.SelectToken("$.Value.#value[?(@.name.#value == 'ТипСтрокойПриемник' )].Value.#value").ToString();
                     mOrder = curR.SelectToken("$.Value.#value[?(@.name.#value == 'Порядок' )].Value.#value").ToString();
                     mBef = curR.SelectToken("$.Value.#value[?(@.name.#value == 'Перед' )].Value.#value").ToString();
+
+                    cRul.listRules.Add(new RulesProperty()
+                    {
+                        NameProperty = NameRules,
+                        PropertyNameSource = mSourceName,
+                        PropertyNameDestination = mRecName,
+                        TypeStringDestination = mTypeName,
+                        Action = mAction,
+                        Order = Int32.Parse(mOrder),
+                        Before = mBef
+                    });
+
+                }
+
+                string jsonString = JsonConvert.SerializeObject(cRul);
+                File.WriteAllText(NewRules, jsonString);
+                Console.WriteLine("Data has been saved to file - " + NewRules);
+                Console.WriteLine(jsonString);
+
+
+
+            }
+
+
+        }
+  static void ConvertRulesTab(string OldRules, string NewRules)
+        {
+
+
+            mRules cRul = new mRules();
+            cRul.MultiValue = false;
+            cRul.NameRules = NameRules;
+
+            Console.WriteLine((OldRules));
+           // Разбор правил табличных частей
+            NameRules = "ТабличныеЧасти";
+
+            // Список табличных частей
+            int x = 0;
+            JToken RlsTab = CurRulesTab.SelectToken("$.#value[?(@.name.#value == " + "'" + NameRules + "'" + " )]");
+            if (RlsTab != null) // Если обписание табличных частей отсутствует
+            {
+                foreach (var curR in RlsTab["Value"]["#value"])
+                {
+
+                    Console.WriteLine(curR["#value"] + " Наименование таб части");
+                    string CurTabCh = curR["#value"].ToString();
+                    JToken RlsRk = CurRulesTab.SelectToken("$.#value[?(@.name.#value == " + "'" + curR["#value"].ToString() + "'" + " )]");
+                    x++;
+                    foreach (var CurObj in RlsRk["Value"]["#value"])
+                    {
+                        //            Console.WriteLine(CurObj);
+
+                        JToken Action = CurObj.SelectToken("$.Value.#value[?(@.name.#value == 'Действие' )].Value.#value");
+                        JToken SourceName = CurObj.SelectToken("$.Value.#value[?(@.name.#value == 'ИмяСвойстваИсточник' )].Value.#value");
+                        JToken RecName = CurObj.SelectToken("$.Value.#value[?(@.name.#value == 'ИмяСвойстваПриемник' )].Value.#value");
+                        JToken TypeName = CurObj.SelectToken("$.Value.#value[?(@.name.#value == 'ТипСтрокойПриемник' )].Value.#value");
+                        JToken Order = CurObj.SelectToken("$.Value.#value[?(@.name.#value == 'Порядок' )].Value.#value");
+                        JToken Bef = CurObj.SelectToken("$.Value.#value[?(@.name.#value == 'Перед' )].Value.#value");
+
+                        TypeData = GetTypeValue(TypeName.ToString());
+                        Console.WriteLine(TypeData);
 
                     cRul.listRules.Add(new RulesProperty()
                     {
