@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 namespace RulesEditor
 {
 
-    struct RulesProperty
+    class RulesProperty
     {
         /// <summary>
         /// Имя реквизита
@@ -52,7 +52,7 @@ namespace RulesEditor
     }
 
 
-    struct ListTabPart
+    class ListTabPart
     {
         /// <summary>
         /// Имя реквизита
@@ -60,10 +60,10 @@ namespace RulesEditor
         /// <value> String</value>
         [JsonProperty("Имя табличной части")]
         public string NameProperty { get; set; }
-          
+
     }
 
-  struct ListTabPartContent
+    class ListTabPartContent
     {
         /// <summary>
         /// Имя реквизита
@@ -77,8 +77,12 @@ namespace RulesEditor
         /// <typeparam name="RulesProperty"></typeparam>
         /// <returns>Структура с правилами</returns>
         [JsonProperty("Список правил для табличных частей")]
+        // public List<RulesProperty> listRules { get; set; }
         public List<RulesProperty> listRules { get; set; } = new List<RulesProperty>();
-          
+        // public ListTabPartContent()
+        // {
+        //     listRules  = new List<RulesProperty>();
+        // }
     }
 
 
@@ -123,13 +127,17 @@ namespace RulesEditor
         /// </summary>
         /// <typeparam name="ListTabPart"></typeparam>
         /// <returns></returns>
-       public List<ListTabPart> ListTabPart { get; set; } = new List<ListTabPart>();  
+        [JsonProperty("Список табличных частей")]
+        // public ListTabPart ListTabPartC { get; set; }
+        public List<ListTabPart> ListTabPartC { get; set; } = new List<ListTabPart>();
         /// <summary>
         /// Список структур с правилами для реквизитов
         /// </summary>
         /// <typeparam name="RulesProperty"></typeparam>
         /// <returns>Структура с правилами</returns>
-        public ListTabPartContent  ListTabPartContent{ get; set; }
+        // public ListTabPartContent ListTabPartContent { get; set; }
+        [JsonProperty("Правила для табличной части")]
+        public List<ListTabPartContent> ListTabPartContentC { get; set; } = new List<ListTabPartContent>();
     }
 
 }
