@@ -41,9 +41,31 @@ namespace RulesEditor
         static void Main(string[] args)
         {
 
-            NameRules = args[2];
-            // ConvertRules(args[0], args[1]);
-            ConvertRulesTab(args[0], args[1]);
+            // NameRules = args[2];
+            string PathToFolder = "D:\\home\\Project\\Kruger\\Rules";
+            string[] allfiles = Directory.GetFiles(PathToFolder, "S*.json");
+            foreach (string filename in allfiles)
+            {
+                Console.WriteLine(filename);
+                NameRules = Path.GetFileNameWithoutExtension(filename).TrimStart('S');
+                Console.WriteLine(NameRules.TrimStart('S'));
+                string NameMeta = Path.GetFileName(filename);
+                ConvertRules(filename, "New\\" + NameMeta);
+            }
+
+            allfiles = Directory.GetFiles(PathToFolder, "F*.json");
+            NameRules = "ТабличныеЧасти";
+            foreach (string filename in allfiles)
+            {
+                Console.WriteLine(filename);
+                Console.WriteLine(NameRules.TrimStart('F'));
+                string NameMeta = Path.GetFileName(filename);
+                ConvertRulesTab(filename, "New\\" + NameMeta);
+            }
+
+
+
+            // ConvertRulesTab(args[0], args[1]);
             mRules cRul = new mRules();
 
             // cRul.MultiValue = false;
@@ -186,7 +208,7 @@ namespace RulesEditor
                     JToken RlsRk = CurRulesTab.SelectToken("$.#value[?(@.name.#value == " + "'" + curR["#value"].ToString() + "'" + " )]");
 
 
-                    int x = 0;
+                    // int x = 0;
                     foreach (var CurObj in RlsRk["Value"]["#value"])
                     {
                         mAction = CurObj.SelectToken("$.Value.#value[?(@.name.#value == 'Действие' )].Value.#value").ToString();
@@ -240,9 +262,7 @@ namespace RulesEditor
                             Order = Int32.Parse(mOrder),
                             Before = mBef
                         });
-
-
-                        x++;
+                        // x++;
                     }
                     // listRulessTemp = listRuless;
                     List<RulesProperty> listRulessTemp = new List<RulesProperty>(listRuless);
